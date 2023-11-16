@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>assim ta bom?</title>
+
+    <style>
+        body {
+            cursor: pointer;
+        }
+
+        .btn-nao{
+            position: absolute;
+            z-index: 100;
+            bottom: 34px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="margin-top: 20px; margin-bottom: 20px;">
+        <div class="row">
+            <div class="col-md-4 mb-2">
+                <img src="./foto1.gif" alt="Foto 1" class="img-fluid">
+            </div>
+            <div class="col-md-4 mb-2">
+                <img src="./foto2.gif" alt="Foto 2" class="img-fluid">
+            </div>
+            <div class="col-md-4 mb-2">
+                <img src="./foto4.gif" alt="Foto 4" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-2">
+                <img src="./foto7.gif" alt="Foto 7" class="img-fluid">
+            </div>
+            <div class="col-md-4 mb-2 text-center" style="display: flex;
+    flex-direction: column;
+    justify-content: center;">
+                <p style="    font-weight: bold;
+      color: #da00ff;
+      font-size: 2rem;">
+                    <3 <3 <3 VAMOS JOGAR PALADINS BREGA?? <3 <3 <3 </p>
+
+                        <button class="btn mb-4 btn-sim" style="background-color: #da00ff; color: #fff; font-weight: bold">SIM 😮‍💨</button>
+                        <button class="btn btn-nao" style="background-color: #da00ff; color: #fff; font-weight: bold" onmouseover="moveButton(this)">NÃO 🤬</button>
+            </div>
+            <div class="col-md-4 mb-2">
+                <img src="./foto5.gif" alt="Foto 5" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-2">
+                <img src="./foto6.gif" alt="Foto 6" class="img-fluid">
+            </div>
+            <div class="col-md-4 mb-2">
+                <img src="./foto3.gif" alt="Foto 3" class="img-fluid">
+            </div>
+            <div class="col-md-4 mb-2">
+                <img src="./foto8.gif" alt="Foto 8" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        function moveButton(x) {
+            marginX = Math.floor(Math.random()*600)
+            marginY = Math.floor(Math.random()*600)
+    
+            x.style.margin = marginY.toString() + 'px ' + marginX.toString() + 'px'
+        }
+
+        $('.btn-sim').click(function(){
+            Swal.fire({
+                title: "Obrigada vc é um bom amigo.",
+                width: 600,
+                padding: "3em",
+                color: "#716add",
+                background: "#fff url(./trees.png)",
+                backdrop: `
+                    rgba(0,0,123,0.4)
+                    url("./cat.gif")
+                    left top
+                    no-repeat
+                `
+                });
+        })
+    </script>
+</body>
+
+</html>
